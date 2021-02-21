@@ -1,0 +1,61 @@
+@import '_variables.scss';
+
+.overlayContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+
+    &__svgContainer {
+        background-color: blue;
+        height: 100%;
+        flex-grow: 1;
+    }
+}
+
+.navigation {
+    background-color: $yellowColor;
+    flex-grow: 1;
+    // flex-grow: 1;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__list {
+        width: 80%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &__item {
+            list-style: none;
+            font-size: 1.7em;
+            font-weight: bold;
+
+            &--link {
+                text-decoration: none;
+                color: $mainFontColor;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .overlayContainer {
+        &__svgContainer {
+            flex-grow: 1;
+        }
+    }
+
+    .navigation {
+        flex-grow: 0;
+    }
+}

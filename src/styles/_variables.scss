@@ -1,0 +1,14 @@
+$mainBackgroundColor: rgb(231, 240, 236);
+$yellowColor: #ffff1a;
+$blueColor: #4d4dff;
+$mainFontColor: rgb(26, 25, 25);
+
+@mixin button {
+    padding: 15px 25px;
+    background-color: $yellowColor;
+    color: $mainFontColor;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
