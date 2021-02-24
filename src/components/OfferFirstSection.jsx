@@ -8,7 +8,7 @@ function OfferFirstSection() {
     const desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti quod fugiat itaque laborum officia consectetur sed. Rem nostrum totam assumenda nemo et accusantium cum nesciunt aperiam adipisci, id inventore sit!";
     const buttonContent = "Meet us!";
     return (
-        <section class="OfferfirstSection">
+        <section className="OfferfirstSection">
             <Header
                 title={title}
                 descContent={desc}
