@@ -1,8 +1,15 @@
+import '../styles/offer.scss';
+import OfferFirstSection from "../components/OfferFirstSection";
+import OfferDescription from "../components/OfferDescription";
+import OfferPlaces from "../components/OfferPlaces";
+
 function Offer() {
     return (
-        <div className="offer">
-            <h1>Oferta</h1>
-        </div>
+        <>
+            < OfferFirstSection />
+            < OfferDescription />
+            < OfferPlaces />
+        </>
     )
 }
 

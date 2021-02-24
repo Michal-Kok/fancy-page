@@ -23,6 +23,6 @@ code {
     monospace;
 }
 
-button {
+.button {
   @include button;
 }

@@ -1,9 +1,12 @@
 import '../styles/navigationOverlay.scss';
 import { NavLink } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import NavigationSVG from './NavigationSVG';
+import { ReactComponent as NavSVG } from '../img/navigationSVG.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookSquare, faYoutube, faGooglePlusSquare } from '@fortawesome/free-brands-svg-icons';
+import gsap from 'gsap';
 
-function NavigationOverlay({ setIsActive }) {
+function NavigationOverlay({ setIsActive, burgerRef }) {
     //const [isEnoughSpace, setIsEnoughSpace] = useState(false);
 
     const checkResolution = () => {
@@ -12,9 +15,72 @@ function NavigationOverlay({ setIsActive }) {
         } else return false;
     };
 
-    const handleLinkClick = () => setIsActive(false);
+    function navigationSVG() {
+        return (
+            <div className="overlayContainer__svgContainer">
+                < NavSVG />
+            </div>
+        )
+    }
 
-    // check if outside component only for SVG is worth it!!!
+    const handleLinkClick = () => {
+        burgerRef.current.classList.toggle('activeBurger');
+        setIsActive(false);
+    }
+
+    useEffect(() => {
+        const leftPanel = document.querySelector('.navigation');
+        const rightPanel = document.querySelector('.overlayContainer__svgContainer');
+        const list = document.querySelector('.navigation__list');
+        const skeletons = document.querySelector('#trees_skeletons');
+        const crowns = document.querySelector('#trees_crown');
+        const sun = document.querySelector('#sun');
+
+
+        gsap.set(leftPanel, { yPercent: -100 });
+        gsap.set(rightPanel, { yPercent: 100 });
+        gsap.set(sun, { scale: 0, transformOrigin: 'center' });
+        let tlLeft = gsap.timeline();
+        let tlRight = gsap.timeline();
+
+        tlLeft.to(
+            leftPanel,
+            { yPercent: 0 }
+        ).fromTo(
+            list.children,
+            { xPercent: -200 },
+            {
+                xPercent: 0,
+                ease: 'back',
+                stagger: .1,
+            }
+        );
+
+        tlRight.to(
+            rightPanel,
+            { yPercent: 0 }
+        ).fromTo(
+            skeletons,
+            {
+                scaleY: 0,
+                transformOrigin: 'bottom'
+            },
+            { scaleY: 1 }
+        ).fromTo(
+            crowns,
+            {
+                scaleY: 0,
+                transformOrigin: 'bottom'
+            },
+            { scaleY: 1 }
+        ).to(
+            sun,
+            { scale: 1 }
+        )
+
+    }, [])
+
+    // check if outside component only for SVG is worth it!!
 
     return (
         <div className="overlayContainer">
@@ -53,9 +119,22 @@ function NavigationOverlay({ setIsActive }) {
                         </NavLink>
                     </li>
                 </ul>
+                <div className="navigation__media">
+                    <ul className="navigation__media__list">
+                        <li className="navigation__media__list__item">
+                            <FontAwesomeIcon icon={faFacebookSquare} />
+                        </li>
+                        <li className="navigation__media__list__item">
+                            <FontAwesomeIcon icon={faYoutube} />
+                        </li>
+                        <li className="navigation__media__list__item">
+                            <FontAwesomeIcon icon={faGooglePlusSquare} />
+                        </li>
+                    </ul>
+                </div>
             </nav>
             {checkResolution()
-                ? < NavigationSVG />
+                ? navigationSVG()
                 : null}
         </div>
     )

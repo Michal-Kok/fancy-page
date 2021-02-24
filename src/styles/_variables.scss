@@ -1,7 +1,8 @@
 $mainBackgroundColor: rgb(231, 240, 236);
-$yellowColor: #ffff1a;
-$blueColor: #4d4dff;
+$yellowColor: #ffdc40;
+$blueColor: #5d51f2;
 $mainFontColor: rgb(26, 25, 25);
+$offerPageGradient: linear-gradient(180deg, #ffcc00 0%, #e8a60c 80%);
 
 @mixin button {
     padding: 15px 25px;
@@ -11,4 +12,72 @@ $mainFontColor: rgb(26, 25, 25);
     cursor: pointer;
     border: none;
     outline: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: -85%;
+        bottom: -200%;
+        transform: rotate(-40deg);
+        width: 100%;
+        height: 300%;
+        background-color: $blueColor;
+        transition: .8s;
+        z-index: -1;
+    }
+
+    &:hover::before {
+        width: 200%;
+        height: 500%;
+    }
+}
+
+// media
+
+$small-phone-width: 380px;
+$bigger-phone-width: 650px;
+$small-tablet-width: 768px;
+$bigger-tablet-width: 1024px;
+$small-desktop-width: 1350px;
+
+@mixin breakpoint($type) {
+    @if $type==small_phone {
+        @media screen and (min-width: #{$small-phone-width}) {
+            @content;
+        }
+    }
+
+    @else if $type==phone_portrait {
+        @media only screen and (min-width: #{$bigger-phone-width}) {
+            @content;
+        }
+    }
+
+    @else if $type==small_tablet {
+        @media only screen and (min-width: #{$small-tablet-width}) {
+            @content;
+        }
+    }
+
+    @else if $type==bigger_tablet {
+        @media only screen and (min-width: #{$bigger-tablet-width}) {
+            @content;
+        }
+    }
+
+    @else if $type==tablet_portrait {
+        @media only screen and (max-width: #{$small-tablet-width}) and (min-height: #{$bigger-tablet-width}) {
+            @content;
+        }
+    }
+
+    @else if $type==small_desktop {
+        @media only screen and (min-width: #{$small-desktop-width}) {
+            @content;
+        }
+    }
+
 }

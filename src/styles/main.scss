@@ -27,7 +27,7 @@
     align-items: flex-start;
 
     &__title {
-        font-size: 1.8em;
+        font-size: 2.2em;
     }
 
     &__desc {
@@ -38,5 +38,56 @@
     &__button {
         margin-top: 15vh;
         font-size: 1.5em;
+    }
+}
+
+@include breakpoint(phone_portrait) {
+    .mainContainer {
+
+        &__SVG {
+            left: 70%;
+        }
+    }
+
+    // .header {
+    //     &__title {
+    //         font-size: 2.7em;
+    //     }
+
+    //     &__desc {
+    //         font-size: 1.3em;
+    //     }
+
+    //     &__button {
+    //         font-size: 1.5em;
+    //     }
+    // }
+}
+
+@include breakpoint(small_tablet) {
+    .mainContainer {
+
+        padding-left: 8%;
+        padding-right: 30%;
+
+        &__SVG {
+            max-width: 450px;
+            max-height: 450px;
+            left: 80%;
+        }
+    }
+
+    .header {
+        &__title {
+            font-size: 3.7em;
+        }
+
+        &__desc {
+            font-size: 2em;
+        }
+
+        &__button {
+            font-size: 2em;
+        }
     }
 }

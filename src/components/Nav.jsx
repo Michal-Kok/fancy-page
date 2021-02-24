@@ -5,10 +5,10 @@ import { ReactComponent as Logo } from '../img/Logo.svg';
 
 function Nav() {
     const [isActive, setIsActive] = useState(false);
-    const burger = useRef();
+    const burgerRef = useRef();
 
     const handleBurgerClick = () => {
-        burger.current.classList.toggle('activeBurger');
+        burgerRef.current.classList.toggle('activeBurger');
         setIsActive(!isActive);
     }
 
@@ -20,14 +20,15 @@ function Nav() {
                     <button
                         onClick={handleBurgerClick}
                         className="navContainer__burgerWrapper__burger"
-                        ref={burger} >
+                        ref={burgerRef} >
 
                     </button>
                 </div>
             </div>
             {isActive
                 ? <NavigationOverlay
-                    setIsActive={setIsActive} />
+                    setIsActive={setIsActive}
+                    burgerRef={burgerRef} />
                 : null}
         </>
     )
