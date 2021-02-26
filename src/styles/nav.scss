@@ -10,9 +10,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
+    padding: 20px 20px 20px 40%;
     overflow: hidden;
     z-index: 2;
+
+    &__goBackButton {
+        position: absolute;
+        top: 15%;
+        left: 3%;
+        border-radius: 50%;
+        font-size: 1.8em;
+        padding: 0px;
+        width: 45px;
+        height: 45px;
+        line-height: 50%;
+    }
 
     &__logo {
         width: 40px;
@@ -31,7 +43,7 @@
             border: 0px;
             padding: 0px;
             background: transparent;
-            transition: all 250ms ease-out;
+            transition: all .25s ease-out;
             cursor: pointer;
         }
 
@@ -63,4 +75,16 @@
 
 .activeBurger:after {
     transform: translateY(0) rotate(-45deg);
+}
+
+@include breakpoint(tablet_portrait) {
+    .navContainer {
+        padding-left: 35%;
+    }
+}
+
+@include breakpoint(small_desktop) {
+    .navContainer {
+        padding-left: 35%;
+    }
 }

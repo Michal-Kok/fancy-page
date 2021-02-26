@@ -1,13 +1,16 @@
 import '../styles/navigationOverlay.scss';
 import { NavLink } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ReactComponent as NavSVG } from '../img/navigationSVG.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare, faYoutube, faGooglePlusSquare } from '@fortawesome/free-brands-svg-icons';
 import gsap from 'gsap';
+import userEvent from '@testing-library/user-event';
 
 function NavigationOverlay({ setIsActive, burgerRef }) {
     //const [isEnoughSpace, setIsEnoughSpace] = useState(false);
+    const leftPanelRef = useRef();
+    const rightPanelRef = useRef();
 
     const checkResolution = () => {
         if (window.innerWidth > 650) {
@@ -17,14 +20,32 @@ function NavigationOverlay({ setIsActive, burgerRef }) {
 
     function navigationSVG() {
         return (
-            <div className="overlayContainer__svgContainer">
+            <div
+                className="overlayContainer__svgContainer"
+                ref={rightPanelRef} >
                 < NavSVG />
             </div>
         )
     }
 
+    // const unmountComponent = () => {
+    //     const leftPanel = leftPanelRef.current;
+    //     const rightPanel = rightPanelRef.current;
+
+    //     let tl = gsap.timeline();
+    //     tl.to(
+    //         leftPanel,
+    //         {
+    //             scale: 0,
+    //             transformOrigin: "top left",
+    //             duration: .2,
+    //         }
+    //     )
+    // }
+
     const handleLinkClick = () => {
         burgerRef.current.classList.toggle('activeBurger');
+        // setTimeout(() => setIsActive(false), 300)
         setIsActive(false);
     }
 
@@ -76,7 +97,11 @@ function NavigationOverlay({ setIsActive, burgerRef }) {
         ).to(
             sun,
             { scale: 1 }
-        )
+        );
+        return () => {
+            console.log('unmount');
+            // unmountComponent();
+        };
 
     }, [])
 
@@ -84,7 +109,9 @@ function NavigationOverlay({ setIsActive, burgerRef }) {
 
     return (
         <div className="overlayContainer">
-            <nav className="navigation">
+            <nav
+                className="navigation"
+                ref={leftPanelRef} >
                 <ul className="navigation__list">
                     <li className="navigation__list__item">
                         <NavLink
