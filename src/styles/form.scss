@@ -1,0 +1,263 @@
+@import '_variables.scss';
+
+.formContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    height: 80%;
+    background-color: $blueColor;
+    border-radius: 30px;
+    color: $brightFontColor;
+    padding: 5% 10% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__svgContainer {
+        display: none;
+    }
+
+    &__title {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    &__description {
+        color: $greyFontColor;
+        margin-bottom: 30px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        &__input {
+            height: 35px;
+            padding: 5px 3px;
+            border: none;
+            border-radius: 7px;
+            background-color: #5145E2;
+            color: white;
+            font-size: .8em;
+            width: 100%;
+
+            &--checkbox {
+                background-color: #5145E2;
+                width: 25px;
+                height: 25px;
+                border-radius: 3px;
+                margin-right: 5px;
+            }
+        }
+
+        &__label {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $greyFontColor;
+            font-size: .7em;
+            text-align: center;
+        }
+
+        &__button {
+            background-color: $mainBackgroundColor;
+        }
+
+        &__button:before {
+            background-color: $yellowColor;
+        }
+    }
+
+    @include breakpoint(phone_portrait) {
+        width: 70%;
+        height: 80%;
+        padding: 2% 5%;
+
+        &__title {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        &__description {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        &__form {
+            width: 60%;
+
+            &__input {
+                height: 25px;
+                font-size: .7em;
+
+                &--checkbox {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                &__error {
+                    font-size: .6em;
+                }
+            }
+
+            &__button {
+                padding: 10px 20px;
+            }
+
+        }
+    }
+
+    @include breakpoint(small_tablet) {
+        align-items: flex-start;
+        padding: 5% 10% 10%;
+
+        &__svgContainer {
+            display: block;
+            position: absolute;
+            top: 40%;
+            right: 10%;
+            height: 200px;
+            width: 200px;
+
+        }
+
+        &__title {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        &__description {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        &__form {
+            width: 50%;
+
+            &__input {
+                //height: 50px;
+                font-size: 1.3em;
+                padding: 25px 10px;
+
+                &--checkbox {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                &__error {
+                    margin-bottom: 10px;
+                }
+            }
+
+            &__label {
+                font-size: 1em;
+                margin-bottom: 10px;
+            }
+
+            &__button {
+                padding: 15px 25px;
+            }
+        }
+    }
+
+    @include breakpoint(bigger_tablet) {
+
+        &__svgContainer {
+
+            height: 250px;
+            width: 250px;
+
+        }
+
+        &__title {
+            font-size: 3.4em;
+            margin-bottom: 30px;
+        }
+
+        &__description {
+            font-size: 2em;
+            margin-bottom: 50px;
+        }
+
+        &__form {
+            width: 50%;
+
+            &__input {
+                //height: 50px;
+                font-size: 1.7em;
+                padding: 35px 20px;
+
+                &--checkbox {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+
+            &__label {
+                font-size: 1.3em;
+                margin-bottom: 20px;
+            }
+
+            &__button {
+                margin-top: 50px;
+                font-size: 2em;
+            }
+        }
+    }
+
+    @include breakpoint(tablet_portrait) {
+        width: 90%;
+        padding: 5%;
+
+        &__svgContainer {
+
+            height: 200px;
+            width: 200px;
+
+        }
+
+        &__title {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        &__description {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+        }
+
+        &__form {
+            width: 50%;
+
+            &__input {
+                //height: 50px;
+                font-size: 1.2em;
+                padding: 25px 15px;
+
+                &--checkbox {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+
+            &__label {
+                font-size: 1em;
+                margin-bottom: 20px;
+            }
+
+            &__button {
+                margin-top: 10px;
+                font-size: 1.5em;
+            }
+        }
+    }
+
+}

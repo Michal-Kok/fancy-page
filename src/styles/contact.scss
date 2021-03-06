@@ -1,0 +1,20 @@
+@import '_variables.scss';
+
+.contactPage {
+    height: 100vh;
+    width: 100vw;
+    padding: 20vh 12% 0px;
+    position: relative;
+    overflow: hidden;
+
+    &__overlayContainer {
+        position: absolute;
+        width: 100vh;
+        height: 100vh;
+        top: 55%;
+        left: 90%;
+        transform: translateY(-50%);
+        background-color: $yellowColor;
+        border-radius: 50%;
+    }
+}

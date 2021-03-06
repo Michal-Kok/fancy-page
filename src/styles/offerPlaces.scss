@@ -1,0 +1,46 @@
+@import "variables.scss";
+
+.offerPlaces {
+    height: 200vh;
+    width: 100vw;
+    background-color: $mainBackgroundColor;
+    position: relative;
+
+    &__mapContainer {
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        background-color: $blueColor;
+
+        &__title {
+            font-size: 1.7em;
+            margin-bottom: 50px;
+            padding: 0 5vh;
+        }
+
+        &__svgContainer {
+            width: 100%;
+            height: fit-content;
+        }
+
+    }
+
+    &__photosContainer {
+        background-color: $blueColor;
+        text-align: center;
+
+        &__textContent {
+            padding: 0 5vh;
+        }
+
+        &__photos {
+            width: 100%;
+            height: 80vh;
+            background-color: $mainBackgroundColor;
+
+            &__content {}
+        }
+    }
+
+    &__opinionContainer {}
+}
