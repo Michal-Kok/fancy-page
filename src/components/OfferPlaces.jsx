@@ -6,7 +6,7 @@ import { ReactComponent as EuropeSVG } from '../img/europe.svg';
 function OfferPlaces() {
 
     const title = "We have travelled and helped people in so many places in Europe";
-    const textContent = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet incidunt mollitia tempore sapiente. Quo minus harum exercitationem eum corporis? "
+    const textContent = "Lorem ipsum, dolor sit amet consectetur adipisicing elit."
     return (
         <section className="offerPlaces">
             <div className="offerPlaces__mapContainer">

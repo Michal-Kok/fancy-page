@@ -7,20 +7,26 @@
     position: relative;
 
     &__mapContainer {
-        height: 100vh;
+        height: 90vh;
         width: 100%;
         text-align: center;
+        display: flex;
+        flex-direction: column;
         background-color: $blueColor;
+        align-items: center;
+        justify-content: flex-start;
 
         &__title {
             font-size: 1.7em;
             margin-bottom: 50px;
             padding: 0 5vh;
+            color: $brightFontColor;
         }
 
         &__svgContainer {
-            width: 100%;
+            width: 85%;
             height: fit-content;
+            margin-top: 50px;
         }
 
     }
@@ -30,7 +36,8 @@
         text-align: center;
 
         &__textContent {
-            padding: 0 5vh;
+            padding: 0 5% 50px 5%;
+            color: $brightFontColor;
         }
 
         &__photos {
