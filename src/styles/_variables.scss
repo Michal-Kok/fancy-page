@@ -2,8 +2,9 @@ $mainBackgroundColor: rgb(231, 240, 236);
 $yellowColor: #ffdc40;
 $blueColor: #5d51f2;
 $mainFontColor: rgb(26, 25, 25);
-$brightFontColor: rgb(198, 204, 200);
-$offerPageGradient: linear-gradient(180deg, #ffcc00 0%, #e8a60c 80%);
+$brightFontColor: rgb(225, 243, 231);
+$greyFontColor: #989FAF;
+//$offerPageGradient: linear-gradient(180deg, #ffcc00 0%, #e8a60c 80%);
 
 @mixin button {
     padding: 15px 25px;
@@ -52,7 +53,7 @@ $small-desktop-width: 1350px;
     }
 
     @else if $type==phone_portrait {
-        @media only screen and (min-width: #{$bigger-phone-width}) {
+        @media only screen and (min-width: #{$bigger-phone-width}) and (orientation: landscape) {
             @content;
         }
     }

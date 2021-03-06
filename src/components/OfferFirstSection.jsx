@@ -1,8 +1,18 @@
 import '../styles/offerFirstSection.scss';
 import Header from './Header';
+import { useHistory } from 'react-router-dom';
 import { ReactComponent as WaveSVG } from '../img/offerWave.svg';
 
 function OfferFirstSection() {
+
+    const history = useHistory();
+    const headerHandleClick = () => {
+        const location = {
+            pathname: "/about",
+        }
+
+        history.push(location);
+    }
 
     const title = "Let your pictures live.";
     const desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti quod fugiat itaque laborum officia consectetur sed. Rem nostrum totam assumenda nemo et accusantium cum nesciunt aperiam adipisci, id inventore sit!";
@@ -12,7 +22,8 @@ function OfferFirstSection() {
             <Header
                 title={title}
                 descContent={desc}
-                buttonContent={buttonContent} />
+                buttonContent={buttonContent}
+                headerHandleClick={headerHandleClick} />
             <div className="OfferfirstSection__svgContainer">
                 < WaveSVG />
             </div>
