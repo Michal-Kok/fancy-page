@@ -5,14 +5,8 @@ function validate({name, email, location, terms}, sendEmail) {
     const emailRegex = /[a-zA-Z]\w+\.?@[a-z]\w+\.\S{2,}/g;
     const locationRegex = /\d{2}\-\d{3}/g;
     errors.state = true;
-    const apiKey = process.env.REACT_APP_API_KEY;
-    let api = `https://emailverification.whoisxmlapi.com/api/v1?apiKey=${apiKey}&emailAddress=${email.toString()}`;
-
-    // const checkIsSMTPValid = () => {
-    //     fetch(api)
-    //     .then(res => {return res.json()})
-    //     .catch(err => console.error(err));
-    // };
+    // const API_KEY = process.env.REACT_APP_API_KEY;
+    // const API_URL = `https://emailverification.whoisxmlapi.com/api/v1?apiKey=${API_KEY}&emailAddress=${email.toString()}`;
 
     if (!name.trim()) {
         errors.name = "Name is required.";
@@ -34,6 +28,8 @@ function validate({name, email, location, terms}, sendEmail) {
         errors.location = "Postal code is invalid. Should be XX-XXX";
         errors.state = false;
     }
+
+    console.log(typeof(terms), terms);
 
     if (!terms) {
         errors.terms = "You have to accept terms.";
