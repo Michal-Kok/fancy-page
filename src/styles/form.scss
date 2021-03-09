@@ -158,6 +158,7 @@
 
                 &__error {
                     margin-bottom: 10px;
+                    font-size: .7em;
                 }
             }
 
@@ -251,6 +252,10 @@
                 &--checkbox {
                     width: 25px;
                     height: 25px;
+                }
+
+                &__error {
+                    font-size: .8em;
                 }
             }
 
