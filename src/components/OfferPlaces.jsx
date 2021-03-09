@@ -1,21 +1,40 @@
 import '../styles/offerPlaces.scss';
-import React, { } from 'react';
+import React, { useEffect } from 'react';
 import { ReactComponent as EuropeSVG } from '../img/europe.svg';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
 function OfferPlaces() {
 
     const title = "We have travelled and helped people in so many places in Europe";
-    const textContent = "Lorem ipsum, dolor sit amet consectetur adipisicing elit.";
+
+    const renderImages = () => {
+        let images = [];
+        for (let i = 0; i < 6; i++) {
+            images.push(
+                <img
+                    src={`${process.env.PUBLIC_URL}/assets/photos/img${i + 1}.jpg`}
+                    alt="image"
+                    key={i}
+                    className="offerPlaces__photosContainer__photos__item" />);
+        }
+        return images;
+    }
 
     useEffect(() => {
         const title = document.querySelector('.offerPlaces__mapContainer__title');
         const pins = document.querySelectorAll('.pin');
         const container = document.querySelector('.offerPlaces__mapContainer');
         const europe = document.querySelector('#europeSVG');
+        const photos = document.querySelectorAll('.offerPlaces__photosContainer__photos__item');
+        const photosContainer = document.querySelectorAll('.offerPlaces__photosContainer__photos');
+        console.log(photos)
+
         gsap.set(title, { opacity: 0, xPercent: -100 });
         gsap.set(pins, { opacity: 0, scale: 0 });
         gsap.set(europe, { opacity: 0, yPercent: 200 });
+        gsap.set(photos, { opacity: 0, xPercent: -40 })
 
 
         gsap.registerPlugin(ScrollTrigger);
@@ -23,6 +42,13 @@ function OfferPlaces() {
             scrollTrigger: {
                 trigger: container,
                 start: 'top 30%',
+            }
+        });
+        const imgTimeline = gsap.timeline({
+            delay: .7,
+            scrollTrigger: {
+                trigger: photosContainer,
+                start: 'top 5%',
             }
         });
 
@@ -50,10 +76,21 @@ function OfferPlaces() {
                 scale: 1,
                 duration: .4,
                 stagger: .4,
-                ease: "expo.out",
+                ease: "bounce.out",
             }
         );
-    })
+
+        imgTimeline.to(
+            photos,
+            {
+                opacity: 1,
+                xPercent: 0,
+                duration: .4,
+                stagger: .2,
+            }
+        )
+
+    }, []);
 
     return (
         <section className="offerPlaces">
@@ -70,12 +107,9 @@ function OfferPlaces() {
                     <h2 className="offerPlaces__photosContainer__title">
                         See what we do
                     </h2>
+                    {renderImages()}
                 </div>
             </section>
-            <div className="offerPlaces__opinionContainer">
-
-            </div>
-
         </section>
     )
 }

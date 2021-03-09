@@ -10,6 +10,7 @@ function validate({name, email, location, terms}, sendEmail) {
 
     if (!name.trim()) {
         errors.name = "Name is required.";
+        errors.state = false;
     } else if(!nameRegex.test(name)) {
         errors.name = "Name is invalid.";
         errors.state = false;
@@ -17,6 +18,7 @@ function validate({name, email, location, terms}, sendEmail) {
     
     if (!email.trim()) {
         errors.email = "Email is required.";
+        errors.state = false;
     } else if(!emailRegex.test(email)) {
         errors.email = "Email is invalid.";
         errors.state = false;
@@ -24,12 +26,11 @@ function validate({name, email, location, terms}, sendEmail) {
 
     if (!location.trim()) {
         errors.location = "We need it for marketing reasons";
+        errors.state = false;
     } else if (!locationRegex.test(location)) { 
         errors.location = "Postal code is invalid. Should be XX-XXX";
         errors.state = false;
     }
-
-    console.log(typeof(terms), terms);
 
     if (!terms) {
         errors.terms = "You have to accept terms.";
@@ -39,5 +40,6 @@ function validate({name, email, location, terms}, sendEmail) {
 
         return errors;
 }
+
 
 export default validate;
