@@ -48,7 +48,7 @@ function OfferPlaces() {
             delay: .7,
             scrollTrigger: {
                 trigger: photosContainer,
-                start: 'top 5%',
+                start: 'top 15%',
             }
         });
 

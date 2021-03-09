@@ -62,7 +62,146 @@
                 width: 45vw;
                 height: fit-content;
             }
-
         }
     }
+
+    @include breakpoint(phone_portrait) {
+        &__mapContainer {
+            padding-top: 100px;
+
+            &__title {
+                font-size: 2em;
+            }
+
+            &__svgContainer {
+                width: 50%;
+            }
+
+        }
+
+        &__photosContainer {
+
+            &__photos {
+
+                &__item {
+                    width: 27vw;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(small_tablet) {
+        &__mapContainer {
+            padding-top: 0;
+
+            &__title {
+                font-size: 3em;
+            }
+
+            &__svgContainer {
+                width: 50%;
+            }
+
+        }
+
+        &__photosContainer {
+
+            &__title {
+                font-size: 3em;
+            }
+
+            &__photos {
+
+                &__item {
+                    width: 40vw;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(bigger_tablet) {
+        &__mapContainer {
+
+            &__title {
+                font-size: 3em;
+                margin-bottom: 120px;
+            }
+
+            &__svgContainer {
+                width: 50%;
+            }
+
+        }
+
+        &__photosContainer {
+
+            &__title {
+                font-size: 3.5em;
+            }
+
+            &__photos {
+
+                &__item {
+                    width: 40vw;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(tablet_portrait) {
+        &__mapContainer {
+
+            &__title {
+                padding: 0 30vh;
+                font-size: 2.8em;
+                margin-bottom: 120px;
+            }
+
+            &__svgContainer {
+                width: 40%;
+            }
+
+        }
+
+        &__photosContainer {
+
+            &__photos {
+                height: 80%;
+
+                &__item {
+                    width: 26vw;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(small_desktop) {
+        &__mapContainer {
+
+            &__title {
+
+                font-size: 2.8em;
+                margin-bottom: 70px;
+            }
+
+            &__svgContainer {
+                width: 30%;
+                margin-bottom: 40px;
+            }
+
+        }
+
+        &__photosContainer {
+
+            &__photos {
+
+                &__item {
+                    margin: 0 30px;
+                    width: 330px;
+                }
+            }
+        }
+    }
+
+
 }
