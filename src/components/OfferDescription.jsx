@@ -31,7 +31,7 @@ function OfferDescription() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: articleElements,
-                start: 'top 10%',
+                start: 'top 20%',
             }
         });
 

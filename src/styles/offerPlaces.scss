@@ -1,14 +1,15 @@
 @import "variables.scss";
 
 .offerPlaces {
-    height: 200vh;
+    //height: 200vh;
     width: 100vw;
     background-color: $mainBackgroundColor;
     position: relative;
 
     &__mapContainer {
-        height: 90vh;
+        //height: 90vh;
         width: 100%;
+        padding: 60px 0 130px 0;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -18,7 +19,6 @@
 
         &__title {
             font-size: 1.7em;
-            margin-bottom: 50px;
             padding: 0 5vh;
             color: $brightFontColor;
         }
@@ -26,7 +26,7 @@
         &__svgContainer {
             width: 85%;
             height: fit-content;
-            margin-top: 50px;
+            margin-top: 40px;
         }
 
     }
@@ -34,10 +34,15 @@
     &__photosContainer {
         background-color: $blueColor;
         text-align: center;
+        position: relative;
 
-        &__textContent {
-            padding: 0 5% 50px 5%;
-            color: $brightFontColor;
+        &__title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            color: $mainFontColor;
         }
 
         &__photos {
@@ -45,7 +50,6 @@
             height: 80vh;
             background-color: $mainBackgroundColor;
 
-            &__content {}
         }
     }
 

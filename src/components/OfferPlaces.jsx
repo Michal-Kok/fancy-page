@@ -6,7 +6,7 @@ import { ReactComponent as EuropeSVG } from '../img/europe.svg';
 function OfferPlaces() {
 
     const title = "We have travelled and helped people in so many places in Europe";
-    const textContent = "Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+
     return (
         <section className="offerPlaces">
             <div className="offerPlaces__mapContainer">
@@ -18,11 +18,8 @@ function OfferPlaces() {
                 </div>
             </div>
             <section className="offerPlaces__photosContainer">
-                <h2 className="offerPlaces__photosContainer__textContent">
-                    {textContent}
-                </h2>
                 <div className="offerPlaces__photosContainer__photos">
-                    <h2 className="offerPlaces__photosContainer__photos__content">
+                    <h2 className="offerPlaces__photosContainer__title">
                         See what we do
                     </h2>
                 </div>
