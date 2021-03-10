@@ -1,5 +1,5 @@
 import '../styles/offerDescription.scss';
-import { ReactComponent as PhotosSVG } from '../img/photos.svg';
+import { ReactComponent as PlayingChildrenSVG } from '../img/playingChildren.svg';
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -13,7 +13,7 @@ function OfferDescription() {
         if (window.innerWidth > 1024) {
             return (
                 <div className="offerDescription__svgContainer">
-                    < PhotosSVG />
+                    < PlayingChildrenSVG />
                 </div>
             );
         } else return null;
