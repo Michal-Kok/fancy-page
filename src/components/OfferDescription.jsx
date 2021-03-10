@@ -21,7 +21,6 @@ function OfferDescription() {
 
     useEffect(() => {
         const articleElements = document.querySelector('.offerDescription__article');
-        const upperPhoto = document.getElementById('upperPhoto');
         let svgElement = document.querySelector('.offerDescription__svgContainer');
         svgElement = svgElement
             ? svgElement.firstChild
