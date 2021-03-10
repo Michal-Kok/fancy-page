@@ -6,8 +6,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 function OfferDescription() {
 
-    const title = "For many years, our team let our clients put their amazing adventures into the pictures.";
-    const content = "After years they could return to these moments and live those memories again. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia doloremque ab, incidunt dolor dolore dignissimos aliquid assumenda ut aspernatur! Dolore voluptatibus asperiores eum nesciunt fuga, numquam magnam nisi sunt aliquid...";
+    const title = "Our mission is to create safe space for children to learning and playing with others";
+    const content = " Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia doloremque ab, incidunt dolor dolore dignissimos aliquid assumenda ut aspernatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia doloremque ab, incidunt dolor dolore dignissimos aliquid assumenda ut aspernatur! Dolore voluptatibus asperiores eum nesciunt fuga, numquam magnam nisi sunt aliquid...";
 
     const renderSVG = () => {
         if (window.innerWidth > 1024) {

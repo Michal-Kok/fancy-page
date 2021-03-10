@@ -11,7 +11,7 @@ function About() {
     const history = useHistory();
 
     const title = "We really look forward to meet you!";
-    const descContent = "And we really know that you wanna know more about us, our little crew and all. Site will be readdy very soon. But not now.";
+    const descContent = "Trysail Sail ho Corsair red ensign hulk smartly boom jib rum gangway. Case shot Shiver me timbers gangplank crack Jennys tea cup ballast Blimey lee snow crow's nest rutters.";
     const buttonContent = "Contact us!";
     const description = "Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters. Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.Trysail Sail ho Corsair red ensign hulk smartly boom jib rum gangway. Case shot Shiver me timbers gangplank crack Jennys tea cup ballast Blimey lee snow crow's nest rutters. Fluke jib scourge of the seven seas boatswain schooner gaff booty Jack Tar transom spirits.  Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.Trysail Sail ho Corsair red ensign hulk smartly boom jib rum gangway. Case shot Shiver me timbers gangplank crack Jennys tea cup ballast Blimey lee snow crow's nest rutters. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters. Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.";
 
@@ -83,13 +83,12 @@ function About() {
                     {description}
                 </p>
                 <ul className="aboutArticle__list">
-                    <li className="aboutArticle__list__item">Planning process</li>
-                    <li className="aboutArticle__list__item">Guiding stuff</li>
-                    <li className="aboutArticle__list__item">Unforgotable journey</li>
+                    <li className="aboutArticle__list__item">Caring in every way</li>
+                    <li className="aboutArticle__list__item">Acces to the best teachers</li>
+                    <li className="aboutArticle__list__item">Unforgotable adventures</li>
                     <li className="aboutArticle__list__item">Brilliant memories</li>
                 </ul>
             </article>
-
         </>
     )
 }

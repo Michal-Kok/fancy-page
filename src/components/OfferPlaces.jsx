@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 function OfferPlaces() {
 
-    const title = "We have travelled and helped people in so many places in Europe";
+    const title = "We provide our educational institutions all around the world.";
 
     const renderImages = () => {
         let images = [];
