@@ -31,9 +31,24 @@ function About() {
                 start: 'top 80%',
             }
         });
+        const backgoroundTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: article,
+                start: "-15% 50%",
+                end: "50% 50%",
+                scrub: true,
+            }
+        })
+
         gsap.registerPlugin(ScrollTrigger);
         gsap.set(article.children, { y: 100, opacity: 0 });
         gsap.set(list.children, { xPercent: -100, opacity: 0 });
+
+        backgoroundTimeline.fromTo(
+            article,
+            { opacity: 0, },
+            { opacity: 1, }
+        );
 
         tl.to(
             article.children,
