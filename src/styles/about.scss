@@ -9,13 +9,14 @@
 
 .aboutArticle {
     width: 100vw;
-    padding: 10% 9% 100px 5%;
+    padding: 25% 9% 100px 5%;
     background-color: $yellowColor;
     color: $mainFontColor;
     min-height: 100vh;
 
     &__title {
         font-size: 3.5em;
+        margin-top: 100px;
         margin-bottom: 35px;
 
         @include breakpoint(small_tablet) {
