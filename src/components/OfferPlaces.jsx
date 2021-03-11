@@ -105,9 +105,9 @@ function OfferPlaces() {
             <section className="offerPlaces__photosContainer">
                 <div className="offerPlaces__photosContainer__photos">
                     <h2 className="offerPlaces__photosContainer__title">
-                        See what we do
+                        Gallery will be available soon.
                     </h2>
-                    {renderImages()}
+                    {/* {renderImages()} */}
                 </div>
             </section>
         </section>
