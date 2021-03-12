@@ -18,11 +18,13 @@ function About() {
     useEffect(() => {
         const article = document.querySelector(".aboutArticle");
         const list = document.querySelector('.aboutArticle__list');
+        gsap.registerPlugin(ScrollTrigger);
 
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: article,
                 start: 'top 15%',
+                toggleActions: "play pause resume reset",
             }
         });
         const listTimeline = gsap.timeline({
@@ -39,8 +41,6 @@ function About() {
                 scrub: true,
             }
         })
-
-        gsap.registerPlugin(ScrollTrigger);
         gsap.set(article.children, { y: 100, opacity: 0 });
         gsap.set(list.children, { xPercent: -100, opacity: 0 });
 
