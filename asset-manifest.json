@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/fancy-page/static/css/main.b43b89db.chunk.css",
+    "main.js": "/fancy-page/static/js/main.b11c600b.chunk.js",
+    "main.js.map": "/fancy-page/static/js/main.b11c600b.chunk.js.map",
+    "runtime-main.js": "/fancy-page/static/js/runtime-main.259474b0.js",
+    "runtime-main.js.map": "/fancy-page/static/js/runtime-main.259474b0.js.map",
+    "static/js/2.24e8c379.chunk.js": "/fancy-page/static/js/2.24e8c379.chunk.js",
+    "static/js/2.24e8c379.chunk.js.map": "/fancy-page/static/js/2.24e8c379.chunk.js.map",
+    "index.html": "/fancy-page/index.html",
+    "static/css/main.b43b89db.chunk.css.map": "/fancy-page/static/css/main.b43b89db.chunk.css.map",
+    "static/js/2.24e8c379.chunk.js.LICENSE.txt": "/fancy-page/static/js/2.24e8c379.chunk.js.LICENSE.txt",
+    "static/media/Logo.74135f88.svg": "/fancy-page/static/media/Logo.74135f88.svg",
+    "static/media/blueCircle.42db9864.svg": "/fancy-page/static/media/blueCircle.42db9864.svg",
+    "static/media/contactCircle.e5104165.svg": "/fancy-page/static/media/contactCircle.e5104165.svg",
+    "static/media/email.63651e54.svg": "/fancy-page/static/media/email.63651e54.svg",
+    "static/media/europe.88826bbe.svg": "/fancy-page/static/media/europe.88826bbe.svg",
+    "static/media/navigationSVG.d5b2f02c.svg": "/fancy-page/static/media/navigationSVG.d5b2f02c.svg",
+    "static/media/offerWave.39348df7.svg": "/fancy-page/static/media/offerWave.39348df7.svg",
+    "static/media/playingChildren.176ff212.svg": "/fancy-page/static/media/playingChildren.176ff212.svg",
+    "static/media/playingGirl.f24943af.svg": "/fancy-page/static/media/playingGirl.f24943af.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.259474b0.js",
+    "static/js/2.24e8c379.chunk.js",
+    "static/css/main.b43b89db.chunk.css",
+    "static/js/main.b11c600b.chunk.js"
+  ]
+}
