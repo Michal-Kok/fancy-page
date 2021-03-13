@@ -1,3 +1,4 @@
+import '../styles/opinions.scss'
 import { clientData } from '../api';
 import OpinionElement from '../components/OpinionElement';
 import { useEffect, useState } from 'react';
@@ -17,7 +18,7 @@ function OpinionsList() {
         <div className="opinions__list">
             {data.length
                 ? data.map(clientData => < OpinionElement
-                    key={clientData.id.value}
+                    key={clientData.name.first}
                     clientData={clientData} />)
                 : <h2 className="opinion__list__erorMsg">{errorMsg}</h2>}
         </div>

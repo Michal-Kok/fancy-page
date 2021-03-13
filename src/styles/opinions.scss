@@ -2,8 +2,7 @@
 
 .opinions {
     width: 100vw;
-    height: 100vh;
-    padding: 60px 5%;
+    padding: 120px 7%;
     background-color: $mainBackgroundColor;
 
     &__title {
@@ -13,5 +12,11 @@
 
     &__textContent {
         line-height: 25px;
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        width: 100%;
+        padding: 0 5%;
     }
 }

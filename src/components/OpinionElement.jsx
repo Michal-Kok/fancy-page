@@ -1,12 +1,14 @@
-
+import '../styles/opinionElement.scss';
 
 function OpinionElement({ clientData: { name, location, picture } }) {
 
     const title = "Awesome team!";
-    const description = "Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.";
+    const description = "Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. ";
     return (
         <div className="opinionElement">
-            <img src={picture.thumbnail} alt="clientImage" className="opinionElement__img" />
+            <div className="opinionElement__imgContainer">
+                <img src={picture.medium} alt="clientImage" className="opinionElement__imgContainer__img" />
+            </div>
             <div className="opinionElement__textContainer">
                 <h3 className="opinionElement__textContainer__title">
                     {title}
@@ -17,9 +19,9 @@ function OpinionElement({ clientData: { name, location, picture } }) {
                 <p className="opinionElement__textContainer__signature">
                     "{name.first} <br /> {name.last}"
                 </p>
-                <adress className="opinionElement__textContainer__adress">
-                    {location.city}, {location.state} <br />
-                </adress>
+                <address className="opinionElement__textContainer__address">
+                    {location.city}, {location.state}
+                </address>
             </div>
         </div>
     );

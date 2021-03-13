@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export const clientData = axios.create({
-    baseURL: 'https://randomuser.me/api/?results=10',
+    baseURL: 'https://randomuser.me/api/?results=4',
 });
