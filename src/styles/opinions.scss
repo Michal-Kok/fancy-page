@@ -1,0 +1,17 @@
+@import '_variables.scss';
+
+.opinions {
+    width: 100vw;
+    height: 100vh;
+    padding: 60px 5%;
+    background-color: $mainBackgroundColor;
+
+    &__title {
+        font-size: 3.7em;
+        margin-bottom: 10px;
+    }
+
+    &__textContent {
+        line-height: 25px;
+    }
+}
