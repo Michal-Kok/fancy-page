@@ -1,4 +1,5 @@
 import Header from '../components/Header';
+import Opinions from '../components/Opinions';
 import '../styles/about.scss';
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
@@ -104,6 +105,7 @@ function About() {
                     <li className="aboutArticle__list__item">Brilliant memories</li>
                 </ul>
             </article>
+            < Opinions />
         </>
     )
 }
