@@ -4,6 +4,7 @@ function OpinionElement({ clientData: { name, location, picture } }) {
 
     const title = "Awesome team!";
     const description = "Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. ";
+
     return (
         <div className="opinionElement">
             <div className="opinionElement__imgContainer">
