@@ -47,9 +47,6 @@ function FindUsContainer() {
     }
 
     useEffect(() => {
-        const london = document.querySelector('#london');
-        const paris = document.querySelector('#paris');
-        const newYork = document.querySelector('#newYork');
 
         cities = [...document.querySelectorAll('.citySwitchButton')];
     })

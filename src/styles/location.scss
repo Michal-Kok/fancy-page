@@ -17,4 +17,6 @@
     &__svgContainer {
         display: none;
     }
+
+    @include breakpoint(small_tablet) {}
 }
