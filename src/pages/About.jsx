@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import Opinions from '../components/Opinions';
+import Location from '../components/Location';
 import '../styles/about.scss';
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
@@ -106,6 +107,7 @@ function About() {
                 </ul>
             </article>
             < Opinions />
+            < Location />
         </>
     )
 }

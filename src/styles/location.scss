@@ -1,0 +1,22 @@
+@import '_variables.scss';
+
+.location {
+    width: 100%;
+    padding: 70px 5%;
+
+    &__title {
+        font-size: 3.7em;
+        margin-bottom: 35px;
+    }
+
+    &__description {
+        font-size: .9em;
+        margin-bottom: 50px;
+    }
+
+    &__svgContainer {
+        display: none;
+    }
+
+    @include breakpoint(small_tablet) {}
+}
