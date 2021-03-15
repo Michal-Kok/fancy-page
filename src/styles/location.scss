@@ -2,7 +2,7 @@
 
 .location {
     width: 100%;
-    padding: 70px 5%;
+    padding: 50px 5% 80px 5%;
 
     &__title {
         font-size: 3.7em;
@@ -18,5 +18,16 @@
         display: none;
     }
 
-    @include breakpoint(small_tablet) {}
+    @include breakpoint(tablet_portrait) {
+
+        &__title {
+            font-size: 4.4em;
+            margin-bottom: 35px;
+        }
+
+        &__description {
+            font-size: 1.5em;
+            margin-bottom: 50px;
+        }
+    }
 }

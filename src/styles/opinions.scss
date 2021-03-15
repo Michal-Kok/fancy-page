@@ -28,7 +28,7 @@
         }
 
         @include breakpoint(bigger_tablet) {
-            padding: 0 3% 200px 3%;
+            padding: 0 3% 40px 3%;
         }
 
         @include breakpoint(tablet_portrait) {
