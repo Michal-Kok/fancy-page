@@ -2,6 +2,9 @@ import Map from '../components/Map';
 import '../styles/findUsContainer.scss';
 import { useState, useEffect } from 'react';
 import { ReactComponent as MarkerSVG } from '../img/girlOnMarker.svg';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useHistory } from 'react-router-dom';
 
 
 const coordinates = {
@@ -20,12 +23,19 @@ const coordinates = {
 }
 
 function FindUsContainer() {
-
     let cities = [];
 
+    const history = useHistory();
     const [location, setLocation] = useState(coordinates.londonCoords);
 
-    const handleClick = ({ target }) => {
+    const handleContactClick = () => {
+        const location = {
+            pathname: "/contact",
+        }
+        history.push(location);
+    }
+
+    const handleCityClick = ({ target }) => {
 
         switch (target.name) {
             case 'london':
@@ -41,15 +51,47 @@ function FindUsContainer() {
                 break;
         }
         cities.forEach(city => city.classList.remove('activeLocation'));
-        // console.log(target)
         target.classList.add('activeLocation');
-        console.log(cities);
     }
 
     useEffect(() => {
 
         cities = [...document.querySelectorAll('.citySwitchButton')];
-    })
+    });
+
+    // useEffect(() => {
+    //     const container = document.querySelector('.findUsContainer');
+    //     const svg = document.querySelector('.findUsContainer__info__svgContainer');
+    //     const dot = document.querySelector('#dot');
+
+    //     gsap.registerPlugin(ScrollTrigger);
+    //     gsap.set(svg, { y: -50, opacity: 0 });
+    //     gsap.set(dot, { scale: 0, transformOrigin: 'center' });
+
+    //     const timeline = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: container,
+    //             start: 'top 60%',
+    //             toggleActions: "play pause resume reset",
+    //             markers: true,
+    //         }
+    //     });
+
+    //     timeline.to(
+    //         svg,
+    //         {
+    //             y: 0,
+    //             opacity: 1,
+    //             ease: "bounce.out",
+    //         }).to(
+    //             dot,
+    //             {
+    //                 scale: 1,
+    //                 ease: "bounce.out",
+    //             }
+    //         );
+
+    // }, []);
 
     return (
         <div className="findUsContainer">
@@ -63,7 +105,9 @@ function FindUsContainer() {
                 <p className="findUsContainer__info__description">
                     Do you want to receive more information?
                 </p>
-                <button className="findUsContainer__info__button button">
+                <button
+                    onClick={handleContactClick}
+                    className="findUsContainer__info__button button">
                     Contact us!
                 </button>
                 <h4 className="findUsContainer__info__options">
@@ -74,7 +118,7 @@ function FindUsContainer() {
                         <button
                             className="citySwitchButton activeLocation"
                             name="london"
-                            onClick={handleClick} >
+                            onClick={handleCityClick} >
                             London
                         </button>
                     </li>
@@ -82,7 +126,7 @@ function FindUsContainer() {
                         <button
                             className="citySwitchButton"
                             name="paris"
-                            onClick={handleClick} >
+                            onClick={handleCityClick} >
                             Paris
                      </button>
                     </li>
@@ -90,7 +134,7 @@ function FindUsContainer() {
                         <button
                             className="citySwitchButton"
                             name="newYork"
-                            onClick={handleClick} >
+                            onClick={handleCityClick} >
                             New York
                         </button>
                     </li>

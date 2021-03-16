@@ -25,7 +25,7 @@ function About() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: article,
-                start: 'top 15%',
+                start: 'top 25%',
                 toggleActions: "play pause resume reset",
             }
         });

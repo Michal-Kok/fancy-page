@@ -1,7 +1,9 @@
 import FindUsContainer from '../components/FindUsContainer';
 import '../styles/location.scss';
 
+
 function Location() {
+
 
     return (
         <section className="location">
