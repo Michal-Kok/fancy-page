@@ -14,7 +14,7 @@ function OfferFirstSection() {
         history.push(location);
     }
 
-    const title = "Let your pictures live.";
+    const title = "We teach life by having fun.";
     const desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti quod fugiat itaque laborum officia consectetur sed. Rem nostrum totam assumenda nemo et accusantium cum nesciunt aperiam adipisci, id inventore sit!";
     const buttonContent = "Meet us!";
     return (

@@ -1,46 +1,208 @@
 @import "variables.scss";
 
 .offerPlaces {
-    height: 200vh;
+    //height: 200vh;
     width: 100vw;
     background-color: $mainBackgroundColor;
     position: relative;
 
     &__mapContainer {
-        height: 100vh;
+        //height: 90vh;
         width: 100%;
+        padding: 60px 0 130px 0;
         text-align: center;
+        display: flex;
+        flex-direction: column;
         background-color: $blueColor;
+        align-items: center;
+        justify-content: flex-start;
 
         &__title {
             font-size: 1.7em;
-            margin-bottom: 50px;
             padding: 0 5vh;
+            color: $brightFontColor;
         }
 
         &__svgContainer {
-            width: 100%;
+            width: 85%;
             height: fit-content;
+            margin-top: 40px;
         }
 
     }
 
     &__photosContainer {
+        height: 100vh;
         background-color: $blueColor;
         text-align: center;
+        overflow: hidden;
 
-        &__textContent {
-            padding: 0 5vh;
+        &__title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            color: $mainFontColor;
+            font-size: 2em;
         }
 
         &__photos {
             width: 100%;
-            height: 80vh;
+            height: 100%;
+            padding-top: 80px;
             background-color: $mainBackgroundColor;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
 
-            &__content {}
+            &__item {
+                width: 45vw;
+                height: fit-content;
+            }
         }
     }
 
-    &__opinionContainer {}
+    @include breakpoint(phone_portrait) {
+        &__mapContainer {
+            padding-top: 100px;
+
+            &__title {
+                font-size: 2em;
+            }
+
+            &__svgContainer {
+                width: 50%;
+            }
+
+        }
+
+        &__photosContainer {
+
+            &__photos {
+
+                &__item {
+                    width: 27vw;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(small_tablet) {
+        &__mapContainer {
+            padding-top: 0;
+
+            &__title {
+                font-size: 3em;
+            }
+
+            &__svgContainer {
+                width: 50%;
+            }
+
+        }
+
+        &__photosContainer {
+
+            &__title {
+                font-size: 3em;
+            }
+
+            &__photos {
+
+                &__item {
+                    width: 40vw;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(bigger_tablet) {
+        &__mapContainer {
+
+            &__title {
+                font-size: 3em;
+                margin-bottom: 120px;
+            }
+
+            &__svgContainer {
+                width: 40%;
+                height: fit-content;
+            }
+
+        }
+
+        &__photosContainer {
+
+            &__title {
+                font-size: 3.5em;
+            }
+
+            &__photos {
+
+                &__item {
+                    width: 40vw;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(tablet_portrait) {
+        &__mapContainer {
+
+            &__title {
+                padding: 0 15vh;
+                font-size: 2.8em;
+                margin-bottom: 120px;
+            }
+
+            &__svgContainer {
+                width: 40%;
+            }
+
+        }
+
+        &__photosContainer {
+
+            &__photos {
+                height: 80%;
+
+                &__item {
+                    width: 26vw;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(small_desktop) {
+        &__mapContainer {
+
+            &__title {
+
+                font-size: 2.8em;
+                margin-bottom: 70px;
+            }
+
+            &__svgContainer {
+                width: 30%;
+                margin-bottom: 40px;
+            }
+
+        }
+
+        &__photosContainer {
+
+            &__photos {
+
+                &__item {
+                    margin: 0 30px;
+                    width: 330px;
+                }
+            }
+        }
+    }
+
+
 }

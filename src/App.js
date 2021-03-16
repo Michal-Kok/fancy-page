@@ -11,7 +11,7 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <div className="App">
-      <Router >
+      <Router basename={process.env.PUBLIC_URL} >
         <Nav />
         <Switch >
           <Route exact path='/' component={Main} />

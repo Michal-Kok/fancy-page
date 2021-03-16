@@ -10,6 +10,9 @@ function Form() {
 
     const sendEmail = () => {
         //send confirmation email
+        // console.log(errors.state);
+        // if (errors.state) return;
+
         window.Email.send({
             SecureToken: process.env.REACT_APP_SECURE_SMTP_TOKEN,
             To: values.email,

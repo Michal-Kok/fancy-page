@@ -1,4 +1,5 @@
 {
+  "homepage": "https://michal-kok.github.io/fancy-page/",
   "name": "imgtravel",
   "version": "0.1.0",
   "private": true,
@@ -11,15 +12,21 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.1",
+    "axios": "^0.21.1",
+    "gh-pages": "^3.1.0",
     "gsap": "^3.6.0",
+    "leaflet": "^1.7.1",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-leaflet": "^3.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

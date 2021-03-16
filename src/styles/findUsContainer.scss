@@ -1,0 +1,153 @@
+@import '_variables.scss';
+
+.activeLocation {
+    border-bottom: 4px solid $yellowColor !important;
+}
+
+.findUsContainer {
+    width: 100%;
+    max-width: 700px;
+    height: fit-content;
+    background-color: $blueColor;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow: hidden;
+    border-radius: 20px;
+
+
+    &__info {
+        height: 430px;
+        padding: 30px;
+        color: $brightFontColor;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+
+        &__svgContainer {
+            position: absolute;
+            top: 30%;
+            left: 60%;
+            width: 130px;
+            height: fit-content;
+
+            @include breakpoint(small_phone) {
+                width: 150px;
+            }
+        }
+
+        &__title {
+            font-size: 1.7em;
+            // margin-bottom: 20px;
+        }
+
+        &__description {
+            font-size: 1em;
+            // margin-bottom: 30px;
+        }
+
+        &__button {
+            background-color: $mainBackgroundColor;
+            margin-bottom: 100px;
+        }
+
+        &__button:before {
+            background-color: $yellowColor;
+        }
+
+        &__list {
+            align-self: flex-end;
+            width: 100%;
+            display: flex;
+            text-align: center;
+
+            &__item {
+                list-style: none;
+                flex-grow: 1;
+
+                & button {
+                    cursor: pointer;
+                    border: none;
+                    font-size: 1em;
+                    padding: 0;
+                    background-color: transparent;
+                    color: $brightFontColor;
+                    outline: none;
+                    transition: .2s;
+                    border-bottom: 4px solid $blueColor;
+                }
+
+                & button:hover {
+                    border-bottom: 4px solid $yellowColor;
+                }
+            }
+        }
+    }
+
+    &__mapContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        padding-top: 0;
+        z-index: 0;
+    }
+
+    @include breakpoint(phone_portrait) {
+
+        &__info {
+            height: 300px;
+
+            &__svgContainer {
+                top: 13%;
+                left: 70%;
+            }
+
+            &__button {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    @include breakpoint(small_tablet) {
+        flex-direction: row;
+        margin: auto;
+
+        &__info {
+            height: 100%;
+            flex-basis: 50%;
+
+            &__svgContainer {
+                width: 130px;
+                top: 30%;
+                left: 60%;
+            }
+
+            &__title {
+                font-size: 1.7em;
+                margin-bottom: 20px;
+            }
+
+            &__description {
+                font-size: .9em;
+                margin-bottom: 80px;
+            }
+
+            &__button {
+                margin-bottom: 100px;
+            }
+
+            &__list {
+                margin-top: 20px;
+            }
+        }
+
+        &__mapContainer {
+            padding-top: 20px;
+            flex-grow: 0;
+            width: 50%;
+        }
+    }
+}

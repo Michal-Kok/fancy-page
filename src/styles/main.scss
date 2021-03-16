@@ -15,6 +15,13 @@
         max-width: 300px;
         max-height: 300px;
         z-index: -1;
+
+        &__girl {
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            display: none;
+        }
     }
 }
 
@@ -46,6 +53,10 @@
 
         &__SVG {
             left: 70%;
+
+            &__girl {
+                display: block;
+            }
         }
     }
 

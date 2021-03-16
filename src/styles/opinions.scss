@@ -1,0 +1,51 @@
+@import '_variables.scss';
+
+.opinions {
+    width: 100vw;
+    padding: 50px 7%;
+    background-color: $mainBackgroundColor;
+
+    &__title {
+        font-size: 3.7em;
+        margin-bottom: 35px;
+    }
+
+    &__textContent {
+        line-height: 25px;
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        width: 100%;
+        padding: 0 5%;
+
+        @include breakpoint(phone_portrait) {
+            padding: 0 4%;
+        }
+
+        @include breakpoint(small_tablet) {
+            padding: 0 3%;
+        }
+
+        @include breakpoint(bigger_tablet) {
+            padding: 0 3% 40px 3%;
+        }
+
+        @include breakpoint(tablet_portrait) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    @include breakpoint(small_desktop) {
+
+        &__title {
+            font-size: 4.4em;
+        }
+
+        &__textContent {
+            font-size: 1.5em;
+        }
+    }
+}
