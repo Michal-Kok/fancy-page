@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/fancy-page/static/css/main.57f02916.chunk.css",
-    "main.js": "/fancy-page/static/js/main.3de5488a.chunk.js",
-    "main.js.map": "/fancy-page/static/js/main.3de5488a.chunk.js.map",
+    "main.css": "/fancy-page/static/css/main.5a012589.chunk.css",
+    "main.js": "/fancy-page/static/js/main.c718040d.chunk.js",
+    "main.js.map": "/fancy-page/static/js/main.c718040d.chunk.js.map",
     "runtime-main.js": "/fancy-page/static/js/runtime-main.259474b0.js",
     "runtime-main.js.map": "/fancy-page/static/js/runtime-main.259474b0.js.map",
     "static/css/2.b4ebbe46.chunk.css": "/fancy-page/static/css/2.b4ebbe46.chunk.css",
-    "static/js/2.dd171c1f.chunk.js": "/fancy-page/static/js/2.dd171c1f.chunk.js",
-    "static/js/2.dd171c1f.chunk.js.map": "/fancy-page/static/js/2.dd171c1f.chunk.js.map",
+    "static/js/2.562408e0.chunk.js": "/fancy-page/static/js/2.562408e0.chunk.js",
+    "static/js/2.562408e0.chunk.js.map": "/fancy-page/static/js/2.562408e0.chunk.js.map",
     "index.html": "/fancy-page/index.html",
     "static/css/2.b4ebbe46.chunk.css.map": "/fancy-page/static/css/2.b4ebbe46.chunk.css.map",
-    "static/css/main.57f02916.chunk.css.map": "/fancy-page/static/css/main.57f02916.chunk.css.map",
-    "static/js/2.dd171c1f.chunk.js.LICENSE.txt": "/fancy-page/static/js/2.dd171c1f.chunk.js.LICENSE.txt",
+    "static/css/main.5a012589.chunk.css.map": "/fancy-page/static/css/main.5a012589.chunk.css.map",
+    "static/js/2.562408e0.chunk.js.LICENSE.txt": "/fancy-page/static/js/2.562408e0.chunk.js.LICENSE.txt",
     "static/media/Logo.74135f88.svg": "/fancy-page/static/media/Logo.74135f88.svg",
     "static/media/blueCircle.42db9864.svg": "/fancy-page/static/media/blueCircle.42db9864.svg",
-    "static/media/contactCircle.e5104165.svg": "/fancy-page/static/media/contactCircle.e5104165.svg",
     "static/media/email.63651e54.svg": "/fancy-page/static/media/email.63651e54.svg",
     "static/media/europe.88826bbe.svg": "/fancy-page/static/media/europe.88826bbe.svg",
-    "static/media/girlOnMarker.4dbbd7c4.svg": "/fancy-page/static/media/girlOnMarker.4dbbd7c4.svg",
+    "static/media/girlOnMarker.f8df2200.svg": "/fancy-page/static/media/girlOnMarker.f8df2200.svg",
     "static/media/markerIcon.6bf20e12.png": "/fancy-page/static/media/markerIcon.6bf20e12.png",
     "static/media/navigationSVG.d5b2f02c.svg": "/fancy-page/static/media/navigationSVG.d5b2f02c.svg",
     "static/media/offerWave.39348df7.svg": "/fancy-page/static/media/offerWave.39348df7.svg",
@@ -27,8 +26,8 @@
   "entrypoints": [
     "static/js/runtime-main.259474b0.js",
     "static/css/2.b4ebbe46.chunk.css",
-    "static/js/2.dd171c1f.chunk.js",
-    "static/css/main.57f02916.chunk.css",
-    "static/js/main.3de5488a.chunk.js"
+    "static/js/2.562408e0.chunk.js",
+    "static/css/main.5a012589.chunk.css",
+    "static/js/main.c718040d.chunk.js"
   ]
 }
